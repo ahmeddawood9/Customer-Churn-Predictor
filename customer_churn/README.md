@@ -96,7 +96,7 @@ XGBoost: Gradient boosting method with scale_pos_weight=3 to explicitly focus on
 
 📈 Results & Analysis
 
-We evaluated models based on Recall (Sensitivity) because missing a churner (False Negative) is more costly to the business than flagging a happy customer (False Positive).
+I evaluated models based on Recall (Sensitivity) because missing a churner (False Negative) is more costly to the business than flagging a happy customer (False Positive).
 1. Random Forest (Baseline)
 
     Accuracy: 77%
