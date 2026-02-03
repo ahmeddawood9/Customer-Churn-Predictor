@@ -98,10 +98,10 @@ XGBoost: Gradient boosting method with scale_pos_weight=3 to explicitly focus on
 
 Models were evaluated based on Recall (Sensitivity) because missing a churner (False Negative) is more costly than a false positive.
 
-Model	Accuracy	Precision (Churn)	Recall (Churn)	F1-Score
-Random Forest	77%	0.59	0.44	0.50
-XGBoost	74%	0.51	0.76	0.61
-
+| Model | Accuracy | Precision (Churn) | Recall (Churn) | F1-Score |
+| :--- | :---: | :---: | :---: | :---: |
+| **Random Forest** | 77% | 0.59 | 0.44 | 0.50 |
+| **XGBoost** | **74%** | **0.51** | **0.76** | **0.61** |
 Key Findings:
 
 Random Forest was conservative, identifying only 44% of churners.
