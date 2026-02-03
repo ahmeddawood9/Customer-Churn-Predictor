@@ -96,17 +96,31 @@ XGBoost: Gradient boosting method with scale_pos_weight=3 to explicitly focus on
 
 📈 Results & Analysis
 
-Models were evaluated based on Recall (Sensitivity) because missing a churner (False Negative) is more costly than a false positive.
+We evaluated models based on Recall (Sensitivity) because missing a churner (False Negative) is more costly to the business than flagging a happy customer (False Positive).
+1. Random Forest (Baseline)
 
-| Model | Accuracy | Precision (Churn) | Recall (Churn) | F1-Score |
-| :--- | :---: | :---: | :---: | :---: |
-| **Random Forest** | 77% | 0.59 | 0.44 | 0.50 |
-| **XGBoost** | **74%** | **0.51** | **0.76** | **0.61** |
-Key Findings:
+    Accuracy: 77%
 
-Random Forest was conservative, identifying only 44% of churners.
+    Precision (Churn): 0.59
 
-XGBoost identified 76% of churners. Although its precision is lower (more false positives), it is superior for retention campaigns where coverage is critical.
+    Recall (Churn): 0.44
+
+    F1-Score: 0.50
+
+    Verdict: Conservative model. It misses too many churners (low recall), making it less effective for retention campaigns.
+
+2. XGBoost (Champion Model)
+
+    Accuracy: 74%
+
+    Precision (Churn): 0.51
+
+    Recall (Churn): 0.76
+
+    F1-Score: 0.61
+
+    Verdict: Aggressive model. It successfully identifies 76% of churners. Although precision is slightly lower, it is the superior choice for minimizing customer loss.
+
 
 Visuals
 
